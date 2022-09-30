@@ -35,6 +35,7 @@
                         ✖
                     </div>
                 </div>
+                <div class="midle">
                 <h4 id="how">how do you like the new Invoices?</h4>
 
                 <input type="radio" name="buttons" id="btn1" value="1" bind:group={rating} />
@@ -52,6 +53,7 @@
                 </div>
 
                 <label for="experience" class="tell">Tell us about your experience:</label>
+                </div>
                 <textarea
                     id="experience"
                     name="experience"
@@ -75,36 +77,33 @@
 </form>
 
 <style>
-    #how {
+    /* #how {
         margin-right: 120px;
-    }
+    } */
     main {
+        
         border: 1px solid black;
-
+margin: auto;
         height: 500px;
-        width: 520px;
-        /* font-family:'sans-serif'; */
+        max-width: 520px;
         font-family: "Open Sans", sans-serif;
         padding-top: 10px;
-        margin-right: 350px;
-        margin-bottom: 100px;
-        /* transform:translate(-50%,-50%); */
+       
+ 
+
+     
     }
-    /* .style{
-    display: none ;
-    color:rgb(0, 166, 255);
-  } */
-    .tell {
-        margin-right: 155px;
-    }
+   
     #experience {
         height: 150px;
         width: 450px;
-        margin-right: 20px;
+        
     }
-    .beta {
-        margin-left: 50px;
+    .midle{
+        display: flex;
+        flex-direction: column;
     }
+    
     .buttons {
         display: flex;
         font-size: 60px;
@@ -113,7 +112,8 @@
     }
     .etoil {
         display: flex;
-        gap: 30px;
+       
+        gap: 50px;
     }
     #close {
         height: 60px;
@@ -139,10 +139,7 @@
         color: rgb(0, 166, 255);
         margin-top: 5px;
     }
-    #usrform {
-        margin-top: 10px;
-        font-size: 20px;
-    }
+     
     input[type="submit"] {
         /* display:inline; */
         color: rgb(70, 68, 68);
@@ -161,11 +158,9 @@
     .cam {
         height: 30px;
         width: 30px;
-        margin-left: 30px;
-    }
-    /* #add{padding-top: 5px;
 
-  } */
+    }
+    
     .ca {
         display: flex;
         gap: 5px;
@@ -176,9 +171,12 @@
 
     .popup-container .popup .icons {
         padding: 10px;
+        display: flex;
+        flex-direction: row;
     }
     .popup-container {
         margin: auto;
+         
     }
 
     .popup-container .popup .icons label {
@@ -186,10 +184,7 @@
         cursor: pointer;
     }
 
-    /* .popup-container .popup .icons:hover label{
-    font-size: 60px ;
-  } */
-
+    
     .popup-container .popup #btn1:checked ~ .icons label:nth-child(1),
     .popup-container .popup #btn2:checked ~ .icons label:nth-child(2),
     .popup-container .popup #btn3:checked ~ .icons label:nth-child(3),
@@ -205,12 +200,26 @@
   }  */
 
     .popup-container .popup #close:active {
-        display: block;
+        /* display: block; */
         height: 27px;
         /* position: absolute; */
         right: 6px;
         text-indent: -9999px;
         /* top: 5px; */
         width: 26px;
+    }
+#usrform {
+        display: flex;
+       
+    font-size: 20px;}
+    .popup{
+        margin-left: 30px;
+        margin-right: 30px;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .tell{
+        padding: 10px;
     }
 </style>
